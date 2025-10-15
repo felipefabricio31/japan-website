@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Global Support - Sua Ponte Para o Sucesso no Japão</title>
+    <meta name="description" content="A Global Support conecta brasileiros a oportunidades de emprego, compra e venda de veículos e serviços de autoescola no Japão. Comece sua jornada conosco!">
+    <meta name="keywords" content="empregos no Japão, brasileiros no Japão, comprar carro no Japão, autoescola no Japão, Global Support, soldador no Japão">
+    <meta name="author" content="Global Support">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=Shibuya+Crossing');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            text-align: center;
+            color: #1f2937; /* Cor cinza escuro */
+        }
+        .section-subtitle {
+            @apply text-center text-gray-500 mb-12 max-w-2xl mx-auto;
+            text-align: center;
+        }
+        .service-card {
+            @apply bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-transform duration-300 ease-in-out border border-gray-100;
+        }
+        .lang-btn {
+            @apply cursor-pointer p-1 rounded-md text-2xl hover:bg-gray-100 transition-colors duration-200;
+        }
+        .lang-btn.active {
+             @apply ring-2 ring-blue-500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50 relative">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Global Support</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#sobre" class="text-gray-600 hover:text-blue-600 transition" data-translate="nav_about">Sobre Nós</a>
+                <a href="#servicos" class="text-gray-600 hover:text-blue-600 transition" data-translate="nav_services">Serviços</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition" data-translate="nav_portfolio">Portfólio</a>
+                <a href="#contato" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition" data-translate="nav_contact">Fale Conosco</a>
+                 <div class="flex items-center space-x-2 border-l pl-4">
+                    <button id="lang-pt" class="lang-btn active">🇧🇷</button>
+                    <button id="lang-en" class="lang-btn">🇺🇸</button>
+                    <button id="lang-ja" class="lang-btn">🇯🇵</button>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+            <a href="#sobre" class="block py-2 px-6 text-gray-600 hover:bg-blue-50 transition" data-translate="nav_about_mobile">Sobre Nós</a>
+            <a href="#servicos" class="block py-2 px-6 text-gray-600 hover:bg-blue-50 transition" data-translate="nav_services_mobile">Serviços</a>
+            <a href="#portfolio" class="block py-2 px-6 text-gray-600 hover:bg-blue-50 transition" data-translate="nav_portfolio_mobile">Portfólio</a>
+            <a href="#contato" class="block py-2 px-6 text-gray-600 hover:bg-blue-50 transition" data-translate="nav_contact_mobile">Fale Conosco</a>
+             <div class="flex items-center space-x-2 justify-center pt-4 border-t mt-2">
+                <button id="lang-pt-mobile" class="lang-btn active">🇧🇷</button>
+                <button id="lang-en-mobile" class="lang-btn">🇺🇸</button>
+                <button id="lang-ja-mobile" class="lang-btn">🇯🇵</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[80vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight" data-translate="hero_title">Sua Nova Jornada no Japão Começa Aqui</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto" data-translate="hero_subtitle">Conectamos brasileiros às melhores oportunidades de trabalho, veículos e habilitação no Japão.</p>
+                <a href="#servicos" class="bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-transform transform hover:scale-105" data-translate="hero_button">Conheça Nossos Serviços</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="sobre" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/EFEFEF/333333?text=Fundador+Trabalhando" alt="Fundador da Global Support trabalhando como soldador" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4" data-translate="about_title">Nossa História: Da Solda ao Sucesso</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed" data-translate="about_p1">
+                            A Global Support tem suas raízes na determinação e no trabalho duro. Nosso fundador iniciou sua carreira em 2008 como soldador no Japão. Essa experiência prática lhe deu a visão necessária para compreender os desafios enfrentados pelos brasileiros no mercado de trabalho japonês.
+                        </p>
+                        <p class="text-gray-600 mb-4 leading-relaxed" data-translate="about_p2">
+                            Em 2021, com o desejo de transformar vidas, fundou a Global Support. Desde então, atuamos ativamente no apoio à comunidade brasileira, promovendo empregos e criando uma ponte sólida entre empresas japonesas e profissionais brasileiros.
+                        </p>
+                        <a href="#contato" class="text-blue-600 font-semibold hover:underline" data-translate="about_link">Entre em contato e saiba mais &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title" data-translate="services_title">Nossos Serviços</h2>
+                <p class="section-subtitle" data-translate="services_subtitle">Soluções completas para facilitar sua vida e carreira no Japão.</p>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Serviço 1: Empregos e RH -->
+                    <div class="service-card">
+                        <div class="bg-blue-100 rounded-full p-4 inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 20 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="service1_title">Empregos e RH</h3>
+                        <p class="text-gray-600" data-translate="service1_desc">Conectamos profissionais brasileiros às melhores oportunidades em empresas japonesas, oferecendo todo o suporte necessário.</p>
+                    </div>
+                    
+                    <!-- Serviço 2: Veículos -->
+                    <div class="service-card">
+                        <div class="bg-blue-100 rounded-full p-4 inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="service2_title">Compra e Venda de Veículos</h3>
+                        <p class="text-gray-600" data-translate="service2_desc">Oferecemos um serviço seguro e transparente para a compra e venda de veículos, com as melhores condições do mercado.</p>
+                    </div>
+
+                    <!-- Serviço 3: Autoescola -->
+                    <div class="service-card">
+                        <div class="bg-blue-100 rounded-full p-4 inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="service3_title">Autoescola e Direção</h3>
+                        <p class="text-gray-600" data-translate="service3_desc">Auxiliamos você a conquistar sua independência no trânsito japonês com nossa autoescola e serviços de habilitação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title" data-translate="portfolio_title">Portfólio</h2>
+                <p class="section-subtitle" data-translate="portfolio_subtitle">Confira alguns dos nossos projetos e a qualidade do nosso trabalho.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x450/CCCCCC/FFFFFF?text=Serviço+1" alt="Serviço de solda industrial 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x450/CCCCCC/FFFFFF?text=Serviço+2" alt="Estrutura metálica complexa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x450/CCCCCC/FFFFFF?text=Serviço+3" alt="Detalhe de solda em viga" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contato" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title" data-translate="contact_title">Fale Conosco</h2>
+                <p class="section-subtitle" data-translate="contact_subtitle">Estamos à disposição para tirar suas dúvidas e ajudar você em sua jornada no Japão.</p>
+
+                <div class="mt-12 max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-8 md:p-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                        
+                        <!-- Coluna da Esquerda: Contatos -->
+                        <div class="flex flex-col gap-8">
+                            <!-- Telefone e Fax -->
+                            <div class="flex items-start gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800" data-translate="contact_phone_title">Telefone & Fax</h3>
+                                    <p class="text-gray-600">Tel: 0270-75-5196</p>
+                                    <p class="text-gray-600">Fax: 0270-75-5198</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800" data-translate="contact_email_title">Email</h3>
+                                    <a href="mailto:contato@globalsuport.info" class="text-blue-600 hover:underline">contato@globalsuport.info</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Coluna da Direita: Endereço -->
+                        <div class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800" data-translate="contact_address_title">Endereço</h3>
+                                <p class="text-gray-600">〒372-0826</p>
+                                <p class="text-gray-600">群馬県伊勢崎市福島町 755-3</p>
+                                <p class="text-gray-500 text-sm">(Gunma-ken, Isesaki-shi, Fukushima-chō 755-3)</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-bold text-xl mb-2" data-translate="footer_title">Global Support</p>
+            <p class="text-gray-400" data-translate="footer_subtitle">Sua ponte para o sucesso no Japão.</p>
+            <!-- Social Media icons can be added here -->
+            <div class="mt-4 border-t border-gray-700 pt-4">
+                <p class="text-gray-500 text-sm" data-translate="footer_copy">&copy; 2024 Global Support. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica de Tradução
+        const translations = {
+            pt: {
+                hero_title: "Sua Nova Jornada no Japão Começa Aqui",
+                hero_subtitle: "Conectamos brasileiros às melhores oportunidades de trabalho, veículos e habilitação no Japão.",
+                hero_button: "Conheça Nossos Serviços",
+                nav_about: "Sobre Nós",
+                nav_services: "Serviços",
+                nav_portfolio: "Portfólio",
+                nav_contact: "Fale Conosco",
+                about_title: "Nossa História: Da Solda ao Sucesso",
+                about_p1: "A Global Support tem suas raízes na determinação e no trabalho duro. Nosso fundador iniciou sua carreira em 2008 como soldador no Japão. Essa experiência prática lhe deu a visão necessária para compreender os desafios enfrentados pelos brasileiros no mercado de trabalho japonês.",
+                about_p2: "Em 2021, com o desejo de transformar vidas, fundou a Global Support. Desde então, atuamos ativamente no apoio à comunidade brasileira, promovendo empregos e criando uma ponte sólida entre empresas japonesas e profissionais brasileiros.",
+                about_link: "Entre em contato e saiba mais &rarr;",
+                services_title: "Nossos Serviços",
+                services_subtitle: "Soluções completas para facilitar sua vida e carreira no Japão.",
+                service1_title: "Empregos e RH",
+                service1_desc: "Conectamos profissionais brasileiros às melhores oportunidades em empresas japonesas, oferecendo todo o suporte necessário.",
+                service2_title: "Compra e Venda de Veículos",
+                service2_desc: "Oferecemos um serviço seguro e transparente para a compra e venda de veículos, com as melhores condições do mercado.",
+                service3_title: "Autoescola e Direção",
+                service3_desc: "Auxiliamos você a conquistar sua independência no trânsito japonês com nossa autoescola e serviços de habilitação.",
+                portfolio_title: "Portfólio",
+                portfolio_subtitle: "Confira alguns dos nossos projetos e a qualidade do nosso trabalho.",
+                contact_title: "Fale Conosco",
+                contact_subtitle: "Estamos à disposição para tirar suas dúvidas e ajudar você em sua jornada no Japão.",
+                contact_phone_title: "Telefone & Fax",
+                contact_email_title: "Email",
+                contact_address_title: "Endereço",
+                footer_title: "Global Support",
+                footer_subtitle: "Sua ponte para o sucesso no Japão.",
+                footer_copy: "&copy; 2024 Global Support. Todos os direitos reservados."
+            },
+            en: {
+                hero_title: "Your New Journey in Japan Starts Here",
+                hero_subtitle: "We connect Brazilians to the best opportunities in jobs, vehicles, and driving licenses in Japan.",
+                hero_button: "Discover Our Services",
+                nav_about: "About Us",
+                nav_services: "Services",
+                nav_portfolio: "Portfolio",
+                nav_contact: "Contact Us",
+                about_title: "Our Story: From Welding to Success",
+                about_p1: "Global Support is rooted in determination and hard work. Our founder began his career in 2008 as a welder in Japan. This hands-on experience gave him the necessary insight to understand the challenges faced by Brazilians in the Japanese job market.",
+                about_p2: "In 2021, with the desire to transform lives, he founded Global Support. Since then, we have been actively supporting the Brazilian community, promoting jobs, and creating a solid bridge between Japanese companies and Brazilian professionals.",
+                about_link: "Contact us and learn more &rarr;",
+                services_title: "Our Services",
+                services_subtitle: "Complete solutions to make your life and career in Japan easier.",
+                service1_title: "Jobs and HR",
+                service1_desc: "We connect Brazilian professionals to the best opportunities in Japanese companies, offering all the necessary support.",
+                service2_title: "Vehicle Purchase and Sale",
+                service2_desc: "We offer a safe and transparent service for buying and selling vehicles, with the best market conditions.",
+                service3_title: "Driving School and Licensing",
+                service3_desc: "We help you achieve your independence on Japanese roads with our driving school and licensing services.",
+                portfolio_title: "Portfolio",
+                portfolio_subtitle: "Check out some of our projects and the quality of our work.",
+                contact_title: "Contact Us",
+                contact_subtitle: "We are available to answer your questions and help you on your journey in Japan.",
+                contact_phone_title: "Phone & Fax",
+                contact_email_title: "Email",
+                contact_address_title: "Address",
+                footer_title: "Global Support",
+                footer_subtitle: "Your bridge to success in Japan.",
+                footer_copy: "&copy; 2024 Global Support. All rights reserved."
+            },
+            ja: {
+                hero_title: "日本での新しい旅はここから始まります",
+                hero_subtitle: "私たちはブラジル人を日本の最高の仕事、車、運転免許の機会につなげます。",
+                hero_button: "サービスを見る",
+                nav_about: "会社概要",
+                nav_services: "サービス",
+                nav_portfolio: "実績",
+                nav_contact: "お問い合わせ",
+                about_title: "私たちの物語：溶接から成功へ",
+                about_p1: "グローバルサポートは、決意と努力に根ざしています。創設者は2008年に日本で溶接工としてのキャリアをスタートさせました。この実践的な経験により、日本の労働市場でブラジル人が直面する課題を理解するために必要な洞察を得ました。",
+                about_p2: "2021年、人々の生活を変えたいという思いからグローバルサポートを設立しました。以来、私たちはブラジル人コミュニティを積極的に支援し、雇用を促進し、日本企業とブラジル人専門家の間に強固な架け橋を築いてきました。",
+                about_link: "お問い合わせ &rarr;",
+                services_title: "私たちのサービス",
+                services_subtitle: "日本での生活とキャリアをより簡単にするための完全なソリューション。",
+                service1_title: "雇用と人事",
+                service1_desc: "私たちはブラジルの専門家を日本企業の最高の機会に結びつけ、必要なすべてのサポートを提供します。",
+                service2_title: "車両の売買",
+                service2_desc: "最高の市場条件で、安全で透明な車両売買サービスを提供します。",
+                service3_title: "自動車学校と免許",
+                service3_desc: "私たちの自動車学校と免許サービスで、日本の道路で自立を達成するお手伝いをします。",
+                portfolio_title: "実績",
+                portfolio_subtitle: "私たちのプロジェクトと仕事の質をご覧ください。",
+                contact_title: "お問い合わせ",
+                contact_subtitle: "ご質問にお答えし、日本でのあなたの旅をお手伝いします。",
+                contact_phone_title: "電話とファックス",
+                contact_email_title: "Eメール",
+                contact_address_title: "住所",
+                footer_title: "グローバルサポート",
+                footer_subtitle: "日本での成功への架け橋。",
+                footer_copy: "&copy; 2024 グローバルサポート. 全著作権所有。"
+            }
+        };
+
+        const setLanguage = (lang) => {
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if(translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-translate-attrib]').forEach(el => {
+                const [attr, key] = el.getAttribute('data-translate-attrib').split(':');
+                if(translations[lang][key]) {
+                    el.setAttribute(attr, translations[lang][key]);
+                }
+            });
+
+            // Atualizar botões ativos
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll(`#lang-${lang}, #lang-${lang}-mobile`).forEach(btn => {
+                btn.classList.add('active');
+            });
+            
+            // Define o atributo lang da tag html
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+        };
+
+        ['pt', 'en', 'ja'].forEach(lang => {
+            document.getElementById(`lang-${lang}`).addEventListener('click', () => setLanguage(lang));
+            document.getElementById(`lang-${lang}-mobile`).addEventListener('click', () => setLanguage(lang));
+        });
+
+        // Duplicar chaves de tradução do menu para o mobile
+        ['nav_about', 'nav_services', 'nav_portfolio', 'nav_contact'].forEach(key => {
+            translations.pt[key + '_mobile'] = translations.pt[key];
+            translations.en[key + '_mobile'] = translations.en[key];
+            translations.ja[key + '_mobile'] = translations.ja[key];
+        });
+
+
+        // Menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+
+</body>
+</html>
+
